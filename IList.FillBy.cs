@@ -35,13 +35,20 @@ namespace CLSS
     /// Assigns the given <paramref name="value"/> to each element of the source
     /// collection.
     /// </summary>
-    /// <typeparam name="T">The type of source collection.</typeparam>
-    /// <typeparam name="TElement">The type of the elements in
-    /// <paramref name="source"/>.</typeparam>
-    /// <param name="source">The <see cref="IList{T}"/> to be filled.</param>
+    /// <typeparam name="T">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/typeparam[@name='T']"/></typeparam>
+    /// <typeparam name="TElement">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/typeparam[@name='TElement']"/></typeparam>
+    /// <param name="source">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/param[@name='source']"/></param>
     /// <param name="value">The value to assign to each collection element.
     /// </param>
-    /// <returns>The source collection.</returns>
+    /// <returns>
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/returns"/></returns>
     /// <exception cref="ArgumentNullException"><paramref name="source"/> is
     /// null.</exception>
     public static T FillBy<T, TElement>(this T source, TElement value)
@@ -58,19 +65,27 @@ namespace CLSS
     /// <paramref name="startIndex"/> (inclusive) and the next
     /// <paramref name="count"/> number of indices.
     /// </summary>
-    /// <typeparam name="T">The type of source collection.</typeparam>
-    /// <typeparam name="TElement">The type of the elements in
-    /// <paramref name="source"/>.</typeparam>
-    /// <param name="source">The <see cref="IList{T}"/> to be filled.</param>
-    /// <param name="valueFactory">The function used to generate a value to
-    /// assign to each collection element. It passes through the element's
-    /// index.</param>
+    /// <typeparam name="T">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/typeparam[@name='T']"/></typeparam>
+    /// <typeparam name="TElement">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/typeparam[@name='TElement']"/></typeparam>
+    /// <param name="source">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/param[@name='source']"/></param>
+    /// <param name="valueFactory">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/param[@name='valueFactory']"/></param>
     /// <param name="startIndex">A 32-bit integer that represents the index in
     /// the <see cref="IList{T}"/> at which filling begins.</param>
     /// <param name="count">The number of elements to copy.</param>
-    /// <returns>The source collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> or
-    /// <paramref name="valueFactory"/> is null.</exception>
+    /// <returns>
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/returns"/></returns>
+    /// <exception cref="ArgumentNullException">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/exception[@cref='ArgumentNullException']"/></exception>
     public static T FillBy<T, TElement>(this T source,
       Func<int, TElement> valueFactory,
       int startIndex,
@@ -85,22 +100,34 @@ namespace CLSS
     }
 
     /// <summary>
-    /// Assigns the given value to each element of the source collection which are
-    /// within the range of <paramref name="startIndex"/> (inclusive) and the
-    /// next <paramref name="count"/> number of indices.
+    /// Assigns the given <paramref name="value"/> to each element of the source
+    /// collection which are within the range of <paramref name="startIndex"/>
+    /// (inclusive) and the next <paramref name="count"/> number of indices.
     /// </summary>
-    /// <typeparam name="T">The type of source collection.</typeparam>
-    /// <typeparam name="TElement">The type of the elements in
-    /// <paramref name="source"/>.</typeparam>
-    /// <param name="source">The <see cref="IList{T}"/> to be filled.</param>
-    /// <param name="valueFactory">The function used to generate a value to
-    /// assign to elements in the specified range.</param>
-    /// <param name="startIndex">A 32-bit integer that represents the index in
-    /// the <see cref="IList{T}"/> at which filling begins.</param>
-    /// <param name="count">The number of elements to copy.</param>
-    /// <returns>The source collection.</returns>
-    /// <exception cref="ArgumentNullException"><paramref name="source"/> or
-    /// <paramref name="valueFactory"/> is null.</exception>
+    /// <typeparam name="T">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/typeparam[@name='T']"/></typeparam>
+    /// <typeparam name="TElement">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/typeparam[@name='TElement']"/></typeparam>
+    /// <param name="source">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/param[@name='source']"/></param>
+    /// <param name="value">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, TElement)"
+    /// path="/param[@name='value']"/></param>
+    /// <param name="startIndex">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement}, int, int)"
+    /// path="/param[@name='startIndex']"/></param>
+    /// <param name="count">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement}, int, int)"
+    /// path="/param[@name='count']"/></param>
+    /// <returns>
+    /// <inheritdoc cref="FillBy{T, TElement}(T, Func{int, TElement})"
+    /// path="/returns"/></returns>
+    /// <exception cref="ArgumentNullException">
+    /// <inheritdoc cref="FillBy{T, TElement}(T, TElement)"
+    /// path="/returns"/></exception>
     public static T FillBy<T, TElement>(this T source,
       TElement value,
       int startIndex,
