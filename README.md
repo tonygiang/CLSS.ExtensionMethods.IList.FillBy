@@ -15,7 +15,7 @@ This package provides `FillBy` to all [`IList<T>`](https://docs.microsoft.com/en
 
 Filling a `List<T>` with a factory function, passing through the element's index number:
 
-```
+```csharp
 using CLSS;
 using System.Linq;
 
@@ -25,7 +25,7 @@ numbers.FillBy(i => i * i); // { 0, 1, 4, 9, 16, }
 
 `FillBy` returns source collection, saving some lines of code and functional-style friendly:
 
-```
+```csharp
 using CLSS;
 using System.Linq;
 
